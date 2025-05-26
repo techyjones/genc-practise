@@ -1,0 +1,28 @@
+.eventCard {
+    border: 2px solid #4CAF50;
+    padding: 20px;
+    margin: 30px auto;
+    width: 60%;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Highlight input field with outline */
+  .highlight-field:focus {
+    outline: 3px solid #FF5722;
+  }
+  
+  /* Compare hidden vs none */
+  /* This input will be hidden but take space */
+  /*
+  input.hidden-visible {
+    visibility: hidden;
+  }
+  */
+  
+  /* This input will be removed from layout */
+  /*
+  input.hidden-none {
+    display: none;
+  }
+  */
+  

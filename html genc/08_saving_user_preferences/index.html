@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Saving User Preferences</title>
+</head>
+<body>
+
+  <h2>Set Your Preferred Theme</h2>
+
+  <label>
+    <input type="radio" name="theme" value="light" /> Light
+  </label>
+  <label>
+    <input type="radio" name="theme" value="dark" /> Dark
+  </label>
+
+  <p>Your selected theme is: <span id="selectedTheme">None</span></p>
+
+  <script>
+    const themeRadios = document.querySelectorAll('input[name="theme"]');
+    const selectedThemeDisplay = document.getElementById('selectedTheme');
+
+    // Load preference on page load
+    window.onload = () => {
+      const savedTheme = localStorage.getItem('preferredTheme');
+      if (savedTheme) {
+        selectedThemeDisplay.textContent = savedTheme;
+        document.querySelector(`input[value="${savedTheme}"]`).checked = true;
+        applyTheme(savedTheme);
+      }
+    };
+
+    themeRadios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        const selected = document.querySelector('input[name="theme"]:checked').value;
+        localStorage.setItem('preferredTheme', selected);
+        selectedThemeDisplay.textContent = selected;
+        applyTheme(selected);
+      });
+    });
+
+    function applyTheme(theme) {
+      if (theme === 'dark') {
+        document.body.style.backgroundColor = '#222';
+        document.body.style.color = '#eee';
+      } else {
+        document.body.style.backgroundColor = '#fff';
+        document.body.style.color = '#000';
+      }
+    }
+  </script>
+
+</body>
+</html>

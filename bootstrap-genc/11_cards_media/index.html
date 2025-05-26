@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 11.1 - Profile Card</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+</head>
+<body class="p-4">
+
+  <div class="card" style="width: 18rem;">
+    <img src="https://randomuser.me/api/portraits/men/75.jpg" class="card-img-top" alt="Profile Image" />
+    <div class="card-body">
+      <h5 class="card-title">John Doe</h5>
+      <p class="card-text">
+        Web Developer based in New York. Passionate about UI/UX design and front-end development.
+      </p>
+      <a href="#" class="btn btn-primary">Follow</a>
+    </div>
+  </div>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 11.2 - Media Object</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <style>
+    /* Bootstrap 5 dropped .media class, so use flex utilities */
+    .media {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+    .media img {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body class="p-4">
+
+  <div class="media">
+    <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="User Avatar" />
+    <div class="media-body">
+      <h5>Jane Smith</h5>
+      <p>
+        Jane is a content strategist with over 10 years of experience. She loves creating compelling stories.
+      </p>
+    </div>
+  </div>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

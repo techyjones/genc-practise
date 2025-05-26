@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Registration Form</title>
+  <style>
+    form {
+      max-width: 400px;
+      margin: 2em auto;
+      padding: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    label {
+      display: block;
+      margin-top: 1em;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 0.5em;
+      margin-top: 0.5em;
+    }
+    button {
+      margin-top: 1em;
+      padding: 0.7em;
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      border-radius: 3px;
+    }
+    output {
+      display: block;
+      margin-top: 1em;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="eventForm">
+    <label for="name">Name:
+      <input type="text" id="name" name="name" placeholder="Your full name" required autofocus />
+    </label>
+
+    <label for="email">Email:
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+    </label>
+
+    <label for="date">Event Date:
+      <input type="date" id="date" name="date" required />
+    </label>
+
+    <label for="eventType">Event Type:
+      <select id="eventType" name="eventType" required>
+        <option value="" disabled selected>Select an event</option>
+        <option value="cleanup">Community Cleanup</option>
+        <option value="foodDrive">Food Drive</option>
+        <option value="musicFestival">Music Festival</option>
+      </select>
+    </label>
+
+    <label for="message">Message:
+      <textarea id="message" name="message" placeholder="Any additional info"></textarea>
+    </label>
+
+    <button type="submit">Register</button>
+    <output id="confirmation"></output>
+  </form>
+
+  <script>
+    const form = document.getElementById('eventForm');
+    const output = document.getElementById('confirmation');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+      output.value = `Thank you, ${form.name.value}, for registering for the ${form.eventType.options[form.eventType.selectedIndex].text} on ${form.date.value}.`;
+    });
+  </script>
+
+</body>
+</html>

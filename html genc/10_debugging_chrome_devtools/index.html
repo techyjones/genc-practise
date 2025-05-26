@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Debugging with Chrome DevTools</title>
+</head>
+<body>
+
+  <h1>Check Console and Debug</h1>
+
+  <button onclick="runDemo()">Click to Run Demo</button>
+
+  <script>
+    function runDemo() {
+      console.log('Demo started');
+
+      let a = 10;
+      let b = 20;
+
+      // Intentional error for debugging
+      try {
+        let result = add(a, b);
+        console.log('Result:', result);
+      } catch (e) {
+        console.error('Error caught:', e);
+      }
+
+      function add(x, y) {
+        return x + y;
+      }
+
+      console.log('Demo ended');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 5.1 - Centering Content</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+</head>
+<body>
+  <div class="container vh-100">
+    <div class="row justify-content-center align-items-center h-100 text-center">
+      <div class="col-md-6 bg-light p-4 border rounded">
+        <h2 class="mb-3">Centered Box</h2>
+        <p>This box is vertically and horizontally centered using Bootstrap flex utilities.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 5.2 - Reordering Columns</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+</head>
+<body>
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-6 order-md-2 bg-info text-white p-3">
+        <h4>First Column (on mobile)</h4>
+        <p>This will appear second on desktops but first on mobile.</p>
+      </div>
+      <div class="col-md-6 order-md-1 bg-warning p-3">
+        <h4>Second Column (on mobile)</h4>
+        <p>This will appear first on desktops but second on mobile.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

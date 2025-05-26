@@ -1,0 +1,33 @@
+/* Base font family */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin: 20px;
+  }
+  
+  /* Header with a different font */
+  header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  /* Description paragraph */
+  .description {
+    font-style: italic;
+    text-align: center;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+  }
+  
+  /* Highlighted announcement */
+  .highlight {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: justify;
+    letter-spacing: 0.05em;
+  }
+  

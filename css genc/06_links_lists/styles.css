@@ -1,0 +1,40 @@
+/* Remove default bullets and padding */
+.nav-menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* List items padding */
+  .nav-menu li {
+    padding: 5px 10px;
+  }
+  
+  /* Link default style */
+  a:link {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  /* Link visited */
+  a:visited {
+    color: #551A8B;
+  }
+  
+  /* Link hover */
+  a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  /* Link active */
+  a:active {
+    color: #ff0000;
+  }
+  
+  /* Paragraph link style */
+  p a {
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,26 @@
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Borders for table, th, and td */
+  table, th, td {
+    border: 1px solid #999;
+    padding: 10px;
+  }
+  
+  /* Zebra striping */
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Header row */
+  thead tr {
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+  }
+  

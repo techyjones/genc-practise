@@ -1,0 +1,34 @@
+/* Universal selector to reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Element selector */
+  h2 {
+    color: navy;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* ID selector */
+  #mainHeader {
+    background-color: #e3f2fd;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Class selector */
+  .eventCard {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 10px;
+    background-color: #fafafa;
+  }
+  
+  /* Grouping selector */
+  h3, p {
+    font-family: 'Arial', sans-serif;
+    color: #555;
+  }
+  

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Feedback with Events Handling</title>
+  <style>
+    #phone {
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="feedbackForm">
+    <label for="phone">Phone Number:
+      <input type="tel" id="phone" name="phone" placeholder="123-456-7890" onblur="validatePhone()" />
+    </label>
+
+    <label for="eventSelect">Select Event:
+      <select id="eventSelect" onchange="showFee()">
+        <option value="" disabled selected>Select an event</option>
+        <option value="cleanup">Community Cleanup</option>
+        <option value="foodDrive">Food Drive</option>
+        <option value="musicFestival">Music Festival</option>
+      </select>
+    </label>
+
+    <p id="eventFee"></p>
+
+    <button type="button" onclick="submitForm()">Submit Feedback</button>
+  </form>
+
+  <img id="promoImage" src="promo.jpg" alt="Promo Image" style="width:200px; margin-top:1em;" ondblclick="enlargeImage()" />
+
+  <textarea id="feedbackText" rows="4" cols="40" placeholder="Enter feedback..." onkeydown="countChars()" onkeyup="countChars()"></textarea>
+  <p>Characters: <span id="charCount">0</span></p>
+
+  <script>
+    function validatePhone() {
+      const phone = document.getElementById('phone').value;
+      const pattern = /^\d{3}-\d{3}-\d{4}$/;
+      if (!pattern.test(phone)) {
+        alert('Invalid phone number format. Use XXX-XXX-XXXX');
+      }
+    }
+
+    function showFee() {
+      const select = document.getElementById('eventSelect');
+      const feeDisplay = document.getElementById('eventFee');
+      const fees = {
+        cleanup: '$10',
+        foodDrive: '$5',
+        musicFestival: '$20'
+      };
+      const event = select.value;
+      feeDisplay.textContent = event ? `Event Fee: ${fees[event]}` : '';
+    }
+
+    function enlargeImage() {
+      const img = document.getElementById('promoImage');
+      if (img.style.width === '200px') {
+        img.style.width = '400px';
+      } else {
+        img.style.width = '200px';
+      }
+    }
+
+    function countChars() {
+      const feedback = document.getElementById('feedbackText').value;
+      document.getElementById('charCount').textContent = feedback.length;
+    }
+
+    function submitForm() {
+      alert('Feedback submitted! Thank you.');
+    }
+  </script>
+
+</body>
+</html>

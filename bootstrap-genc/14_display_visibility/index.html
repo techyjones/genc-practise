@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 14.1 - Display and Visibility</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+</head>
+<body class="p-4">
+
+  <div class="d-none d-md-block p-3 mb-3 bg-info text-white rounded">
+    <h4>Visible on medium (md) screens and above</h4>
+    <p>This block is hidden on small and extra small screens.</p>
+  </div>
+
+  <div class="d-none d-lg-flex p-3 mb-3 bg-success text-white rounded justify-content-center align-items-center" style="height:100px;">
+    <h4>Visible as flex container on large (lg) screens and above</h4>
+  </div>
+
+  <div class="p-3 mb-3 bg-warning text-dark rounded">
+    <h4>Always Visible</h4>
+    <p>This block is always visible regardless of screen size.</p>
+  </div>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 14.2 - Responsive Sidebar</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <style>
+    body {
+      min-height: 100vh;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+      <!-- Sidebar visible only on md and above -->
+      <nav class="col-md-3 d-none d-md-block bg-secondary text-white p-4" style="min-height: 100vh;">
+        <h5>Sidebar</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item"><a href="#" class="nav-link text-white">Dashboard</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white">Profile</a></li>
+          <li class="nav-item"><a href="#" class="nav-link text-white">Settings</a></li>
+        </ul>
+      </nav>
+
+      <main class="col-12 col-md-9 p-4">
+        <h2>Main Content</h2>
+        <p>This main section is full-width on small screens and adjusts to the right of the sidebar on tablets and larger screens.</p>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

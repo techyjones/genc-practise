@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 16.1 - Fixed Footer</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <style>
+    body {
+      min-height: 100vh;
+      padding-bottom: 60px; /* Space for footer */
+    }
+    footer {
+      height: 60px;
+      line-height: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container py-5">
+    <h1>Page Content</h1>
+    <p>This page has a fixed footer at the bottom using Bootstrap's positioning utilities.</p>
+  </div>
+
+  <footer class="position-fixed bottom-0 w-100 bg-dark text-white text-center">
+    Fixed Footer - Always visible at the bottom
+  </footer>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Exercise 16.2 - Overlay Badge</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css" />
+  <style>
+    .image-container {
+      position: relative;
+      display: inline-block;
+    }
+    .badge-overlay {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 1rem;
+    }
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body class="p-4">
+
+  <div class="image-container">
+    <img src="https://via.placeholder.com/200" alt="Product Image" class="rounded" />
+    <span class="badge bg-danger badge-overlay">New</span>
+  </div>
+
+  <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

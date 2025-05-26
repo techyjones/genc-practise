@@ -1,0 +1,8 @@
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #FF6347; /* Tomato color */
+    margin: 50px auto;
+    border: 3px solid black;
+  }
+  

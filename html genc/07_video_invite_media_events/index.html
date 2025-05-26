@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Video Invite with Media Events</title>
+</head>
+<body>
+
+  <h1>Community Event Invitation</h1>
+
+  <video id="eventVideo" width="400" controls>
+    <source src="community_event.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <p id="videoStatus">Video Status: Not started</p>
+
+  <script>
+    const video = document.getElementById('eventVideo');
+    const status = document.getElementById('videoStatus');
+
+    video.addEventListener('play', () => {
+      status.textContent = 'Video Status: Playing';
+    });
+
+    video.addEventListener('pause', () => {
+      status.textContent = 'Video Status: Paused';
+    });
+
+    video.addEventListener('ended', () => {
+      status.textContent = 'Video Status: Ended';
+      alert('Thanks for watching the invitation!');
+    });
+
+    video.addEventListener('timeupdate', () => {
+      status.textContent = `Video Status: Playing - ${Math.floor(video.currentTime)}s elapsed`;
+    });
+  </script>
+
+</body>
+</html>

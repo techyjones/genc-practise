@@ -1,0 +1,20 @@
+body {
+    /* Fallback background color */
+    background-color: #cccccc;
+  
+    /* Background image with fallback */
+    background-image: url('https://via.placeholder.com/1500x800');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #333;
+  }
+  
+  /* Section header with gradient background */
+  .header-section {
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,113,1) 50%, rgba(0,212,255,1) 100%);
+    padding: 20px;
+    color: white;
+    text-align: center;
+  }
+  
